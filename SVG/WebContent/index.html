@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="US-ASCII">
+<title>Insert title here</title>
+</head>
+<script>
+   var p = [10,20,30,40,50];
+</script>
+<body>
+   <p> Hello World !! </p>
+</body>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript">
+   	console.log("Testing the log");
+   	d3.select("body").selectAll("p").data(p).enter().append("p").text("Hello ...");
+   
+	// Test Data
+	var data=[-2.347, 4, 5.23,-1.234,6.234,7.431]; // or whatever.
+	var scale=d3.scale.linear().domain([d3.min(data), d3.max(data)]).range([0,120]);
+	console.log(scale(4));
+   	console.log(scale.ticks(10));
+   
+   
+   	console.log("Done");
+</script>
+</html>
